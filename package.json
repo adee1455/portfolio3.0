@@ -17,7 +17,7 @@
   "scripts": {
     "prepare": "simple-git-hooks",
     "dev": "astro dev --host",
-    "build": "next build",
+    "build": "astro build",
     "preview": "astro preview",
     "lint": "eslint .",
     "lint:fix": "eslint . --fix",
