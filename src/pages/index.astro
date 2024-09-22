@@ -1,0 +1,79 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro'
+import siteConfig from '../site-config'
+import React, { useState } from 'react'
+import { motion } from 'framer-motion'
+import { LinkPreview } from '../components/ui/link-preview'
+---
+
+<BaseLayout description={siteConfig.description}>
+  <article class="prose">
+    <h1 class="text-title">Adee Shaikh</h1>
+    <p class="">
+      Front-end Web Developer | Web3 & Blockchain Enthusiast | Budding
+      Entrepreneur
+    </p>
+    <p>
+      Creator of <a target="_blank" href="https://defile.vercel.app">Defile</a>.
+      - Winner of Two Tracks at <i>Build The New Internet</i> Hackathon.
+    </p>
+    <!-- <p>
+      <img width="640" height="360" src="/hero.jpg" alt="Hero Image" />
+    </p> -->
+    <p>
+      I am a passionate front-end web developer with a deep interest in Web3,
+      Blockchain, and Artificial Intelligence. As the co-founder of Jade
+      Studios, I specialize in developing intuitive and responsive web
+      applications, combining innovative technologies to deliver robust digital
+      solutions. Currently, I am pursuing my BSc in Computer Science at the
+      Ashoka Center for Business and Computer Studies, honing my skills in
+      advanced web technologies and decentralized platforms.
+    </p>
+    <p>
+      I have gained extensive experience through various roles in web
+      development and digital solutions. As a Web Developer Intern at DataCrush
+      Analytics, I worked on many projects, ensuring the delivery of
+      high-performance websites by aligning technical solutions with business
+      objectives. During my time at Neuropal.in, a mental health startup, I
+      contributed to building user-friendly platform that utilized AI to enhance
+      mental well-being. I also led sales initiatives at ReachMoreAudience, a
+      social media marketing agency, helping creators grow their online presence
+      across multiple platforms. Throughout these roles, I have developed strong
+      technical, leadership, and problem-solving skills, consistently delivering
+      value-driven solutions.
+    </p>
+    <p>
+      Sharing knowledge I enjoy sharing my learnings and experiences through
+      educational threads on Twitter about DeFi and decentralized technologies.
+      I also engage with the community via blog posts, talks, and tutorials that
+      dive deep into front-end development, blockchain, and AI. In the future, I
+      plan to grow my presence by creating more content around these topics. I
+      love connecting with like-minded professionals and innovators.
+    </p>
+    <p>
+      Contact me Drop me an email at <a href="mailto:shaikhadee1455@gmail.com"
+        >shaikhadee1455@gmail.com</a
+      > if you'd like to discuss Web3, blockchain, or any new projects we could work
+      on together.
+    </p>
+
+    <hr class="hr-line" />
+    <p>Find me on</p>
+    <p class="flex gap-x-4 gap-y-2 flex-wrap">
+      {
+        siteConfig.socialLinks.map((link) => (
+          <a
+            aria-label={link.text}
+            href={link.href}
+            target="_blank"
+            class="prose-link"
+          >
+            <i class:list={[link.icon]} />
+            {link.text}
+          </a>
+        ))
+      }
+      <a class="" href="/projects"><span class="text-white">Projects</span></a>
+    </p>
+  </article>
+</BaseLayout>
